@@ -3,14 +3,18 @@
 import React, { useContext } from 'react'
 import MyContext from './Context'
 export const Comsumer = () => {
-    const {name,sir}=useContext(MyContext)
+    const {count,handler}=useContext(MyContext)
 
   return (
     <div>
         
-        Comsumer
+      
 
-        <h1>{name}{sir}</h1>
+        <h1>  Comsumer</h1>
+
+           <h2>{count}</h2>
+
+           <button onClick={handler}>click</button>
     </div>
   )
 }
