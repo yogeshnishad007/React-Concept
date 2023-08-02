@@ -1,13 +1,20 @@
 
 import './App.css';
-import ComA from './Components/ComA';
+import { Comsumer } from './ContextTheme/Comsumer';
+import Provider from './ContextTheme/Provider';
+//import ComA from './Components/ComA';
 
 
 function App() {
   return (
     <div className="App">
+  <Provider>
+  <Comsumer/>
+
+  </Provider>
+     
       
-      <ComA/>
+      {/* <ComA/> */}
     </div>
   );
 }
