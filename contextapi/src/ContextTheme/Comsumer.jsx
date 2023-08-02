@@ -2,19 +2,23 @@
 
 import React, { useContext } from 'react'
 import MyContext from './Context'
+
+import "./Style.css"
 export const Comsumer = () => {
-    const {count,handler}=useContext(MyContext)
+    const {toggle,handler}=useContext(MyContext)
 
   return (
-    <div>
+    <div className={toggle?"dark":"light"} >
         
       
 
-        <h1>  Comsumer</h1>
+        <h1>  Comsumer Heading</h1>
 
-           <h2>{count}</h2>
+           <h2>{toggle?"DARK":"LIGHT"}</h2>
 
-           <button onClick={handler}>click</button>
+           <button onClick={handler}>{toggle?"LIGHT":"DARK"}</button>
+
+           <h2>Footer Part</h2>
     </div>
   )
 }

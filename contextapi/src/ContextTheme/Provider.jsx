@@ -5,17 +5,17 @@ import MyContext from "./Context";
 
 const Provider =({children})=>{
     
-    const [count,setCount]=useState(0);
+    const [toggle,setToggle]=useState(false);
 
     const handler=()=>{
 
-           setCount(count+1)
+           setToggle(!toggle)
     }
 
       return(
 
           <>
-           <MyContext.Provider value={{count,handler}}>
+           <MyContext.Provider value={{toggle,handler}}>
 
              {children}
            </MyContext.Provider>
